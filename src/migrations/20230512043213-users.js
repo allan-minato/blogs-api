@@ -11,18 +11,21 @@ module.exports = {
           type: Sequelize.INTEGER,
         },
         display_name: {
+          allowNull: false,
           type: Sequelize.STRING,
         },
         email: {
+          allowNull: false,
           type: Sequelize.STRING,
         },
         password: {
+          allowNull: false,
           type: Sequelize.STRING,
         },
         image: {
+          allowNull: true,
           type: Sequelize.STRING,
         },
-
       });
     
   },
