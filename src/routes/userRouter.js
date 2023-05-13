@@ -10,10 +10,10 @@ const router = express.Router();
 
 router.post(
 '/user', 
-emailValidator, 
-displayNameValidator, 
+emailValidator,
+displayNameValidator,
 passwordValidator,
-userController.createUser,
+ userController.createUser,
  );
 
 module.exports = router;
