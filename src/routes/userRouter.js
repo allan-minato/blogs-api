@@ -5,6 +5,7 @@ const {
     emailValidator,
     passwordValidator, 
     } = require('../middleware/userValidatior');
+const { validateJwt } = require('../middleware/tokenValidator');
 
 const router = express.Router();
 
@@ -15,5 +16,7 @@ displayNameValidator,
 passwordValidator,
  userController.createUser,
  );
+
+router.get('/user', validateJwt, userController.getUser);
 
 module.exports = router;
