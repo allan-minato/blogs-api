@@ -18,5 +18,6 @@ passwordValidator,
  );
 
 router.get('/user', validateJwt, userController.getUser);
+router.get('/user/:id', validateJwt, userController.getUserById);
 
 module.exports = router;

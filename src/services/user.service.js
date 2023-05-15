@@ -6,6 +6,13 @@ const getUser = async () => {
     return getAll;
 };
 
+const getUserById = async (id) => {
+    const getById = await User.findOne({ WHERE: id, attributes: { exclude: 'password' } });
+
+    return getById;
+};
+
 module.exports = {
     getUser,
+    getUserById,
 };
