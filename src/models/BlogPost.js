@@ -5,18 +5,19 @@
  */
 
 const BlogPosts = (Sequelize, DataTypes) => {
-    const categoryTable = Sequelize.define('BlogPost', {
-        id: { type: DataTypes.INTEGER,
-            allowNull: false,
-            autoIncrement: true,
-            primaryKey: true,
-        },  
-        title: DataTypes.STRING,
-        content: DataTypes.STRING,
-        user_id: DataTypes.INTEGER,
-        published: DataTypes.DATE,
-        updated: DataTypes.DATE,
-    });
+  const categoryTable = Sequelize.define('BlogPost', {
+      id: { type: DataTypes.INTEGER,allowNull: false,autoIncrement: true, primaryKey: true,},  
+      title: DataTypes.STRING,
+      content: DataTypes.STRING,
+      user_id: DataTypes.INTEGER,
+      published: DataTypes.DATE,
+      updated: DataTypes.DATE,
+    },
+    {
+      timestamps: false,
+      underscored: true,
+    }
+  );
 
     categoryTable.associate = (models) => {
         categoryTable.belongsTo(models.User, {

@@ -2,6 +2,7 @@ const express = require('express');
 const loginRoute = require('./routes/loginRouter');
 const userRoute = require('./routes/userRouter');
 const categoriesRoute = require('./routes/categoriesRouter');
+const blogPostRoute = require('./routes/blogPostRouter');
 
 // ...
 
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(loginRoute);
 app.use(userRoute);
 app.use(categoriesRoute);
+app.use(blogPostRoute);
 
 // ...
 
