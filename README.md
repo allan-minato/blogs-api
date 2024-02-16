@@ -64,12 +64,6 @@ npm run migrate
 
 npm start
 
-## Testes
-
-Os testes da aplicação estão no diretório ./tests. Execute com o comando:
-
-npm test
-
 ## Docker
 
 A aplicação está containerizada usando Docker.
