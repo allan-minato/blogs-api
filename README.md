@@ -1,8 +1,9 @@
-# Medieval Store API
+# Blog API
 
-Bem-vindo à Medieval Store API, uma aplicação desenvolvida em Typescript e Sequelize para gerenciar itens medievais, como espadas feitas sob encomenda. Este projeto inclui autenticação JWT para proteger rotas sensíveis, além de testes usando Jest para garantir o funcionamento correto das operações. A aplicação está containerizada usando Docker para facilitar a implantação.
+Bem-vindo à Blog API, uma aplicação Node.js desenvolvida com o pacote Sequelize para gerenciar a produção de conteúdo para um blog. Este projeto inclui autenticação JWT para proteger operações sensíveis, seguindo os princípios do REST.
 
 ## Estrutura do Projeto
+
 ```
 ./src
 |-- controllers
@@ -14,7 +15,7 @@ Bem-vindo à Medieval Store API, uma aplicação desenvolvida em Typescript e Se
 |-- utils
 ```
 
-- **controllers:** Contém os controladores responsáveis por gerenciar as requisições HTTP.
+- **controllers:** Responsável por gerenciar as requisições HTTP.
 - **services:** Agrupa a lógica de negócios da aplicação, separando-a dos controladores.
 - **models:** Armazena os modelos Sequelize que representam as entidades do banco de dados.
 - **routes:** Define as rotas da API.
@@ -26,15 +27,50 @@ Bem-vindo à Medieval Store API, uma aplicação desenvolvida em Typescript e Se
 
 ### Autenticação
 
-- Rota para login, retornando um token JWT para autenticação em rotas protegidas.
+- Rota para login, retornando um token JWT para autenticação em operações protegidas.
 
-### Itens Medievais
+### Usuários
 
-- Criação de itens medievais personalizados.
-- Recuperação de informações sobre um item medieval específico.
-- Atualização de detalhes de um item medieval.
+- Criação de usuários para autenticação.
+
+### Categorias
+
+- Operações CRUD para gerenciar categorias de posts.
+
+### Posts
+
+- Criação de posts associados a um usuário e categoria.
+- Recuperação de informações sobre um post específico.
+- Atualização de detalhes de um post.
 
 ## JWT Authentication
 
-Para acessar rotas protegidas, inclua o token JWT na header da requisição:
+Para acessar operações protegidas, inclua o token JWT na header da requisição:
+
+Authorization: Bearer <seu_token_jwt>
+
+
+## Como Executar
+
+1. Instale as dependências:
+
+npm install
+
+2. Execute as migrations:
+
+npm run migrate
+
+3. nicie a aplicação:
+
+npm start
+
+## Testes
+
+Os testes da aplicação estão no diretório ./tests. Execute com o comando:
+
+npm test
+
+## Docker
+
+A aplicação está containerizada usando Docker.
 
