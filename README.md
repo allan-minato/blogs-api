@@ -45,10 +45,7 @@ Bem-vindo à Blog API, uma aplicação Node.js desenvolvida com o pacote Sequeli
 
 ## JWT Authentication
 
-Para acessar operações protegidas, inclua o token JWT na header da requisição:
-
-Authorization: Bearer <seu_token_jwt>
-
+Para acessar operações protegidas, inclua o token JWT na header da requisição
 
 ## Como Executar
 
